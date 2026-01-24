@@ -1,8 +1,8 @@
 const galleryPreview = [
-  { src: "/images/baby.jpg", title: "BABY" },
-  { src: "/images/hero3.jpg", title: "WEDDING" },
-  { src: "/images/event.jpg", title: "EVENT" },
-  { src: "/images/cultural.jpg", title: "CULTURAL" },
+  { src: "/sreephotography/images/baby.jpg", title: "BABY" },
+  { src: "/sreephotography/images/hero3.jpg", title: "WEDDING" },
+  { src: "/sreephotography/images/event.jpg", title: "EVENT" },
+  { src: "/sreephotography/images/cultural.jpg", title: "CULTURAL" },
 ];
 
 export default function About() {

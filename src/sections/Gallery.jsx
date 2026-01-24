@@ -1,13 +1,13 @@
 const galleryItems = [
-    { id: 1, category: "WEDDING STORIES", image: "/images/wedding.jpg" },
-    { id: 2, category: "CHRISTIAN", image: "/images/hero1.jpg" },
-    { id: 3, category: "PUBERTY", image: "/images/puberty.jpg" },
-    { id: 4, category: "WEDDING STORIES", image: "/images/hero2.jpg" },
-    { id: 5, category: "PRE WEDDING", image: "/images/prewedding.jpg" },
-    { id: 6, category: "BABY", image: "/images/baby.jpg" },
-    { id: 7, category: "COUPLE PORTRAITS", image: "/images/hero3.jpg" },
-    { id: 8, category: "CULTURAL", image: "/images/cultural2.jpg" },
-    { id: 9, category: "PRODUCT", image: "/images/product.jpg" },
+    { id: 1, category: "WEDDING STORIES", image: "/sreephotography/images/wedding.jpg" },
+    { id: 2, category: "CHRISTIAN", image: "/sreephotography/images/hero1.jpg" },
+    { id: 3, category: "PUBERTY", image: "/sreephotography/images/puberty.jpg" },
+    { id: 4, category: "WEDDING STORIES", image: "/sreephotography/images/hero2.jpg" },
+    { id: 5, category: "PRE WEDDING", image: "/sreephotography/images/prewedding.jpg" },
+    { id: 6, category: "BABY", image: "/sreephotography/images/baby.jpg" },
+    { id: 7, category: "COUPLE PORTRAITS", image: "/sreephotography/images/hero3.jpg" },
+    { id: 8, category: "CULTURAL", image: "/sreephotography/images/cultural2.jpg" },
+    { id: 9, category: "PRODUCT", image: "/sreephotography/images/product.jpg" },
 ];
 
 export default function Gallery() {

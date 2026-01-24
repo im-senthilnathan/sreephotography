@@ -25,7 +25,7 @@ export default function Footer() {
 
                 {/* BRAND */}
                 <div>
-                    <img src="/images/logoImg.png" alt="logo" className="w-44 mb-4" />
+                    <img src="/sreephotography/images/logoImg.png" alt="logo" className="w-44 mb-4" />
 
                     <p className="text-white/70 text-sm leading-relaxed mb-6">
                         We capture timeless moments with creativity and emotion.

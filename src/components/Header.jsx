@@ -25,7 +25,7 @@ const Header = () => {
         ${showShadow ? "shadow-lg bg-primary" : "bg-transparent"}`}
       >
         {/* Logo */}
-        <img src="/images/logoImg.png" alt="logo" className="w-44" />
+        <img src="/sreephotography/images/logoImg.png" alt="logo" className="w-44" />
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8 text-xl font-medium text-white font-poppins">
