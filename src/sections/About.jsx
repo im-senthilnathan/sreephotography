@@ -66,9 +66,9 @@ export default function About() {
         </div>
 
         <div className="md:col-span-2 flex justify-center">
-          <button className="bg-primary text-white cursor-pointer px-8 py-4 rounded-full font-inter font-semibold">
+          <a href="#packages" className="bg-primary text-white cursor-pointer px-8 py-4 rounded-full font-inter font-semibold">
             View Packages
-          </button>
+          </a>
         </div>
 
       </div>
