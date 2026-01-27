@@ -3,12 +3,10 @@ import emailjs from "@emailjs/browser";
 import {
     MapPin,
     Phone,
-    Mail,
     Clock,
-    Facebook,
     Instagram,
-    Youtube,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
     const formRef = useRef();
@@ -112,39 +110,34 @@ export default function Contact() {
                     <div className="mb-6">
                         <h4 className="font-semibold text-lg mb-2 flex items-center gap-2">
                             <MapPin size={18} className="text-accent" /> Address </h4>
-                        <p className="text-white/80"> Madurai, Tamil Nadu<br /> India </p>
+                        <p className="text-white/80"> H-06, TNHB Colony, Sector - 6,<br /> Koodal Pudur, (Opp. JEYA MAHAL), <br /> Madurai - 625017 </p>
                     </div>
                     {/* Contact */}
                     <div className="mb-6">
                         <h4 className="font-semibold text-lg uppercase mb-2 flex items-center gap-2">
                             <Phone size={18} className="text-accent" /> Contact </h4>
                         <p className="text-white/80">
-                            Phone: +91 84389 83003 • +91 96555 13003
+                            Phone: +91 97872 39395 • +91 84389 83003
                             <br />
-                            Email: studio@email.com
+                            Email: sreephotographystudio@email.com
                         </p>
                     </div>
                     {/* Open Time */}
                     <div className="mb-6">
                         <h4 className="font-semibold text-lg mb-2 flex items-center gap-2">
                             <Clock size={18} className="text-accent" /> Open Time </h4> <p className="text-white/80">
-                            Mon – Sat: 10:00 AM – 8:00 PM
-                            <br />
-                            Sunday: By Appointment
+                            Mon – Sun: 10:00 AM – 8:00 PM
                         </p>
                     </div>
                     {/* Social */}
                     <div>
                         <h4 className="font-semibold text-lg mb-3"> Stay Connected </h4>
                         <div className="flex gap-3">
-                            <a className="p-3 bg-white/20 backdrop-blur-md shadow-lg shadow-primary/10 cursor-pointer rounded-full border-2 border-primary/20 hover:bg-white/30 transition hover:scale-110 hover:text-accent hover:border-accent/20 hover:shadow-accent/10">
-                                <Facebook size={20} />
+                            <a href="https://wa.me/9787239395" target="_blank" className="p-3 bg-white/20 backdrop-blur-md shadow-lg shadow-primary/10 cursor-pointer rounded-full border-2 border-primary/20 hover:bg-white/30 transition hover:scale-110 hover:text-green-500 hover:border-green-500/20 hover:shadow-green-500/10">
+                                <FaWhatsapp size={20} />
                             </a>
-                            <a className="p-3 bg-white/20 backdrop-blur-md shadow-lg shadow-primary/10 cursor-pointer rounded-full border-2 border-primary/20 hover:bg-white/30 transition hover:scale-110 hover:text-accent hover:border-accent/20 hover:shadow-accent/10">
+                            <a href="https://www.instagram.com/sreephotographystudio" target="_blank" className="p-3 bg-white/20 backdrop-blur-md shadow-lg shadow-primary/10 cursor-pointer rounded-full border-2 border-primary/20 hover:bg-white/30 transition hover:scale-110 hover:text-pink-500 hover:border-pink-500/20 hover:shadow-pink-500/10">
                                 <Instagram size={20} />
-                            </a>
-                            <a className="p-3 bg-white/20 backdrop-blur-md shadow-lg shadow-primary/10 cursor-pointer rounded-full border-2 border-primary/20 hover:bg-white/30 transition hover:scale-110 hover:text-accent hover:border-accent/20 hover:shadow-accent/10">
-                                <Youtube size={20} />
                             </a>
                         </div>
                     </div>
@@ -152,10 +145,10 @@ export default function Contact() {
             </div>
 
             {/* MAP */}
-            <div className="mt-16 h-[300px] rounded-2xl overflow-hidden shadow-lg">
+            <div className="mt-10 h-[300px] rounded-2xl overflow-hidden shadow-lg">
                 <iframe
                     title="Studio Location"
-                    src="https://www.google.com/maps?q=Madurai,Tamil%20Nadu,India&output=embed"
+                    src="https://www.google.com/maps?q=9.9529425,78.1092767&z,=17&output=embed"
                     className="w-full h-full border-0"
                     loading="lazy"
                 />

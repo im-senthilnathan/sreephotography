@@ -10,7 +10,7 @@ export default function FloatingChat() {
 
             {/* WhatsApp */}
             <a
-                href="https://wa.me/919994559047"
+                href="https://wa.me/9787239395"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`

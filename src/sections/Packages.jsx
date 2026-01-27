@@ -62,13 +62,13 @@ export default function Packages() {
     const scrollRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
+    const CARD_WIDTH = 320;
+
     const scroll = (direction) => {
         if (!scrollRef.current) return;
 
-        const cardWidth = 320;
-
         scrollRef.current.scrollBy({
-            left: direction === "left" ? -cardWidth : cardWidth,
+            left: direction === "left" ? -CARD_WIDTH : CARD_WIDTH,
             behavior: "smooth",
         });
 
@@ -85,7 +85,7 @@ export default function Packages() {
             className="relative py-20 px-4 md:px-20 bg-gradient-to-t from-primary/10 to-white/10"
         >
             {/* Heading */}
-            <div className="text-center mb-6">
+            <div className="text-center mb-8">
                 <h2 className="font-subhead tracking-[0.3em] text-4xl uppercase text-gray-900 mb-3">
                     Packages
                 </h2>
@@ -106,38 +106,41 @@ export default function Packages() {
                     <ChevronLeft />
                 </button>
 
-                {/* Cards */}
+                {/* Cards Container */}
                 <div
                     ref={scrollRef}
-                    className="flex gap-8 overflow-x-hidden scroll-smooth"
+                    className="
+            flex gap-8
+            overflow-x-scroll scroll-smooth
+            cursor-grab active:cursor-grabbing
+            no-scrollbar
+          "
                 >
                     {packages.map((pkg, index) => (
                         <div
                             key={index}
-                            className="group relative min-w-[300px] h-[400px] my-6 mx-4 border-b-8 border-primary rounded-2xl
-              bg-white shadow-lg overflow-hidden transition-all duration-500"
+                            className="group relative min-w-[300px] h-[420px] my-6 mx-2
+              rounded-2xl bg-white shadow-lg overflow-hidden
+              border-b-8 border-primary
+              transition-all duration-500"
                         >
                             {/* Hover Fill Overlay */}
                             <div
-                                className="absolute inset-0 bg-primary transform translate-y-full
+                                className="absolute inset-0 bg-primary
+                transform translate-y-full
                 transition-transform duration-500 ease-out
                 group-hover:translate-y-0"
                             />
 
                             {/* Content */}
                             <div className="relative z-10 p-8 h-full flex flex-col">
-                                <h3
-                                    className="text-xl font-semibold font-poppins uppercase text-center mb-3
-                  text-gray-900 group-hover:text-white transition"
-                                >
+                                <h3 className="text-xl font-semibold uppercase text-center mb-3
+                text-gray-900 group-hover:text-white transition">
                                     {pkg.name}
                                 </h3>
 
-                                <p
-                                    className="text-3xl font-bold font-inter mb-6 border-b
-                  border-gray-200 pb-4 text-gray-900
-                  group-hover:text-white group-hover:border-white/40 transition"
-                                >
+                                <p className="text-3xl font-bold mb-6 border-b border-gray-200 pb-4
+                text-gray-900 group-hover:text-white group-hover:border-white/40 transition">
                                     {pkg.name !== "Custom" && (
                                         <span className="block text-sm font-normal opacity-80">
                                             Starting @
@@ -153,20 +156,28 @@ export default function Packages() {
                                             className="flex items-center gap-2
                       text-gray-700 group-hover:text-white transition"
                                         >
-                                            <Check size={18} className="text-primary group-hover:text-white" />
+                                            <Check
+                                                size={18}
+                                                className="text-primary group-hover:text-white"
+                                            />
                                             <span>{feature}</span>
                                         </li>
                                     ))}
                                 </ul>
 
-                                <button
-                                    className=
-                                    {`w-full py-3 rounded-full font-bold cursor-pointer
-                  bg-primary text-white group-hover:bg-transparent group-hover:text-white group-hover:border-white border-2 hover:bg-white hover:text-primary
-                  transition hover:brightness-110 ${pkg.name == "Custom" ? "block" : "hidden"}`}
-                                >
-                                    Connect with us
-                                </button>
+                                {pkg.name === "Custom" && (
+                                    <button
+                                        className="
+                      mt-4 w-full py-3 rounded-full font-bold
+                      border-2 border-white
+                      bg-transparent text-white
+                      hover:bg-white hover:text-primary
+                      transition
+                    "
+                                    >
+                                        Connect with us
+                                    </button>
+                                )}
                             </div>
                         </div>
                     ))}
@@ -184,21 +195,21 @@ export default function Packages() {
             </div>
 
             {/* Dots Indicator */}
-            <div className="flex justify-center gap-3">
+            <div className="flex justify-center gap-3 mt-6">
                 {packages.map((_, i) => (
                     <button
                         key={i}
                         onClick={() => {
                             if (!scrollRef.current) return;
                             scrollRef.current.scrollTo({
-                                left: i * 320,
+                                left: i * CARD_WIDTH,
                                 behavior: "smooth",
                             });
                             setActiveIndex(i);
                         }}
                         className={`h-2 w-2 rounded-full transition ${activeIndex === i
-                            ? "bg-primary w-6"
-                            : "bg-gray-300 hover:bg-gray-400"
+                                ? "bg-primary w-6"
+                                : "bg-gray-300 hover:bg-gray-400"
                             }`}
                     />
                 ))}

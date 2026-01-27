@@ -36,7 +36,7 @@ export default function Home() {
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-center text-white">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-heading mt-32 md:mt-0 md:text-6xl font-semibold italic leading-tight">
-            Capturing Moments That Last Forever
+            We don't just take Pictures We click Hearts
           </h1>
 
           <p className="mt-4 text-lg font-inter md:text-xl text-accent">
