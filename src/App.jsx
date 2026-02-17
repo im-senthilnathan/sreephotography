@@ -1,19 +1,21 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/Header'
-import Home from './sections/Home'
-import About from './sections/About'
-import Services from './sections/Services'
-import Gallery from './sections/Gallery'
-import Packages from './sections/Packages'
-import Contact from './sections/Contact'
-import Footer from './components/Footer'
-import FloatingChat from './components/FloatingChat'
+import { Suspense, lazy } from "react";
+import "./App.css";
+import Loader from "./components/Loader";
+
+// Lazy imports
+const Header = lazy(() => import("./components/Header"));
+const Home = lazy(() => import("./sections/Home"));
+const About = lazy(() => import("./sections/About"));
+const Services = lazy(() => import("./sections/Services"));
+const Gallery = lazy(() => import("./sections/Gallery"));
+const Packages = lazy(() => import("./sections/Packages"));
+const Contact = lazy(() => import("./sections/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
+const FloatingChat = lazy(() => import("./components/FloatingChat"));
 
 function App() {
-
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <Header />
       <Home />
       <About />
@@ -23,8 +25,8 @@ function App() {
       <Contact />
       <Footer />
       <FloatingChat />
-    </>
-  )
+    </Suspense>
+  );
 }
 
-export default App
+export default App;

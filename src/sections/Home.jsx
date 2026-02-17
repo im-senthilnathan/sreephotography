@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 const images = [
-  "/sreephotography/images/hero1.jpg",
-  "/sreephotography/images/hero2.jpg",
-  "/sreephotography/images/hero3.jpg",
+  "/sreephotography/images/20.jpg.jpeg",
+  "/sreephotography/images/14.jpg.jpeg",
+  "/sreephotography/images/17.jpg.jpeg",
 ];
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-center text-white">
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-heading mt-32 md:mt-0 md:text-6xl font-semibold italic leading-tight">
+          <h1 className="text-4xl capitalize font-heading mt-32 md:mt-0 md:text-6xl font-semibold italic leading-tight">
             We don't just take Pictures We click Hearts
           </h1>
 
@@ -45,7 +45,7 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#gallery" className="rounded-full font-inter cursor-pointer bg-white/10 backdrop-blur-md border-2 border-white/15 px-8 py-3 text-white font-semibold hover:bg-white/30 transition">
+            <a href="#gallery" className="rounded-full font-inter cursor-pointer bg-white/10 backdrop-blur-xs border-2 border-white/15 px-8 py-3 text-white font-semibold hover:bg-white/30 transition">
               View Portfolio
             </a>
 

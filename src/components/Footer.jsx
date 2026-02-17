@@ -5,9 +5,38 @@ import {
     MapPin,
     ArrowRight,
 } from "lucide-react";
+import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
+
+    const [email, setEmail] = useState("");
+    const [status, setStatus] = useState(""); // success / error / loading
+
+    const handleSubscribe = (e) => {
+        e.preventDefault();
+
+        if (!email) {
+            setStatus("Please enter your email");
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)) {
+            setStatus("Invalid email format");
+            return;
+        }
+
+        // Simulate API call
+        setStatus("loading");
+
+        setTimeout(() => {
+            setStatus("success");
+            setEmail("");
+        }, 1500);
+    };
+
     return (
         <footer className="bg-primary text-white">
 
@@ -89,18 +118,48 @@ export default function Footer() {
 
                 {/* NEWSLETTER */}
                 <div>
-                    <h4 className="font-semibold font-poppins mb-4">Get the latest updates</h4>
+                    <h4 className="font-semibold font-poppins mb-4">
+                        Get the latest updates
+                    </h4>
 
-                    <div className="flex bg-white/20 rounded-full overflow-hidden">
+                    <form
+                        onSubmit={handleSubscribe}
+                        className="flex bg-white/20 rounded-full overflow-hidden"
+                    >
                         <input
                             type="email"
                             placeholder="Email address"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             className="bg-transparent px-4 py-3 text-sm outline-none w-full placeholder:text-white font-semibold"
                         />
-                        <button className="bg-accent text-blwhiteack px-4 flex items-center justify-center hover:brightness-110 transition">
+
+                        <button
+                            type="submit"
+                            className="bg-accent text-black px-4 flex items-center justify-center hover:brightness-110 transition"
+                        >
                             <ArrowRight size={18} />
                         </button>
-                    </div>
+                    </form>
+
+                    {/* Status messages */}
+                    {status === "success" && (
+                        <p className="text-accent text-sm mt-3">
+                            Subscribed successfully
+                        </p>
+                    )}
+
+                    {status === "loading" && (
+                        <p className="text-white text-sm mt-3">
+                            Subscribing...
+                        </p>
+                    )}
+
+                    {status !== "success" && status !== "loading" && status && (
+                        <p className="text-red-400 text-sm mt-3">
+                            {status}
+                        </p>
+                    )}
                 </div>
 
             </div>
