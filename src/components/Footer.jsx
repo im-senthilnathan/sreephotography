@@ -64,7 +64,7 @@ export default function Footer() {
                     <div className="flex gap-3">
                         {/* WhatsApp */}
                         <a
-                            href="https://wa.me/9787239395"
+                            href="https://wa.me/+919787239395"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-12 h-12 rounded-full bg-green-500 text-white
