@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const galleryItems = Array.from({ length: 35 }, (_, i) => ({
     id: i + 1,
-    image: `/sreephotography/images/${i + 1}.jpg.jpeg`,
+    image: `/images/${i + 1}.jpg.jpeg`,
 }));
 
 export default function Gallery() {

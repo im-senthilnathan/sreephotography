@@ -90,7 +90,7 @@ export default function Packages() {
                     Packages
                 </h2>
                 <p className="text-gray-600 font-poppins">
-                    Choose a package that fits your story
+                    Negotiable & customizable packages to fit your unique needs
                 </p>
             </div>
 
@@ -208,8 +208,8 @@ export default function Packages() {
                             setActiveIndex(i);
                         }}
                         className={`h-2 w-2 rounded-full transition ${activeIndex === i
-                                ? "bg-primary w-6"
-                                : "bg-gray-300 hover:bg-gray-400"
+                            ? "bg-primary w-6"
+                            : "bg-gray-300 hover:bg-gray-400"
                             }`}
                     />
                 ))}

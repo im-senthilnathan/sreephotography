@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 const images = [
-  "/sreephotography/images/20.jpg.jpeg",
-  "/sreephotography/images/14.jpg.jpeg",
-  "/sreephotography/images/17.jpg.jpeg",
+  "/images/20.jpg.jpeg",
+  "/images/14.jpg.jpeg",
+  "/images/17.jpg.jpeg",
 ];
 
 export default function Home() {

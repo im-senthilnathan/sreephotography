@@ -23,6 +23,21 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Hide scrollbar - Chrome, Safari */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar - IE, Edge */
+.no-scrollbar {
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar - Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(100%);

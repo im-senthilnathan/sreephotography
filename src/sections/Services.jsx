@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 const services = [
     {
         title: "WEDDING",
-        image: "/sreephotography/images/wedding.jpg",
+        image: "/images/wedding.jpg",
         subtitles: [
             "Candid & Traditional coverage",
             "Full-day or multi-day shoots",
@@ -12,7 +12,7 @@ const services = [
     },
     {
         title: "PRE WEDDING",
-        image: "/sreephotography/images/prewedding.jpg",
+        image: "/images/prewedding.jpg",
         subtitles: [
             "Outdoor & destination shoots",
             "Creative concepts & themes",
@@ -21,7 +21,7 @@ const services = [
     },
     {
         title: "PUBERTY",
-        image: "/sreephotography/images/puberty.jpg",
+        image: "/images/puberty.jpg",
         subtitles: [
             "Traditional & candid coverage",
             "Cultural rituals captured with care",
@@ -30,7 +30,7 @@ const services = [
     },
     {
         title: "EVENT",
-        image: "/sreephotography/images/event2.jpg",
+        image: "/images/event2.jpg",
         subtitles: [
             "Corporate events",
             "Birthday & anniversary functions",
@@ -39,7 +39,7 @@ const services = [
     },
     {
         title: "PORTRAIT",
-        image: "/sreephotography/images/potrait.jpg",
+        image: "/images/potrait.jpg",
         subtitles: [
             "Individual & family portraits",
             "Studio & outdoor sessions",
@@ -48,7 +48,7 @@ const services = [
     },
     {
         title: "BABY & MATERNITY",
-        image: "/sreephotography/images/baby2.jpg",
+        image: "/images/baby2.jpg",
         subtitles: [
             "Newborn photoshoots",
             "Baby milestones",
@@ -57,7 +57,7 @@ const services = [
     },
     {
         title: "CULTURAL & TRADITIONAL",
-        image: "/sreephotography/images/cultural2.jpg",
+        image: "/images/cultural2.jpg",
         subtitles: [
             "Temple & ritual photography",
             "Cultural ceremonies",
@@ -66,7 +66,7 @@ const services = [
     },
     {
         title: "COMMERCIAL & PRODUCT",
-        image: "/sreephotography/images/product.jpg",
+        image: "/images/product.jpg",
         subtitles: [
             "Product catalog shoots",
             "Brand & business photography",
@@ -75,7 +75,7 @@ const services = [
     },
     {
         title: "YOUTUBE LIVE",
-        image: "/sreephotography/images/youtubelive.jpg",
+        image: "/images/youtubelive.jpg",
         subtitles: [
             "HD live streaming setup",
             "Stable internet & sound management",
